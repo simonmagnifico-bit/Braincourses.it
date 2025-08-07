@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Corso di Elettronica | SkillLab.it</title>
+  <style>
+    body {font-family: 'Segoe UI', Arial, sans-serif; background: linear-gradient(135deg, #f4f4f4 60%, #e0e7ff 100%); margin: 0; padding: 0; min-height: 100vh;}
+    <div class="gallery-section locked" id="videoSection">
+      <div class="overlay">Effettua il pagamento per sbloccare la galleria video</div>
+      <h2 style="margin-bottom:18px;">Galleria video del corso</h2>
+      <div class="video-gallery">
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/1yH1Z8FzVbA" title="Componenti fondamentali" frameborder="0" allowfullscreen></iframe>
+          <div class="video-info">
+            <div class="video-title">Componenti fondamentali</div>
+          </div>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/2VwsvrPFr9w" title="Montaggio circuito base" frameborder="0" allowfullscreen></iframe>
+          <div class="video-info">
+            <div class="video-title">Montaggio circuito base</div>
+          </div>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/3Q8nI5Gk6a8" title="Uso del breadboard" frameborder="0" allowfullscreen></iframe>
+          <div class="video-info">
+            <div class="video-title">Uso del breadboard</div>
+          </div>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/4Q7FTjhvZ7Y" title="Manopola per intensità" frameborder="0" allowfullscreen></iframe>
+          <div class="video-info">
+            <div class="video-title">Installazione manopola per intensità</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    header {background: #fff; padding: 28px 10px 16px 10px; text-align: center; border-bottom: 2px solid #ddd; box-shadow: 0 2px 8px rgba(44,62,80,0.04);}
+    header img {max-height: 60px; margin-bottom: 8px;}
+    h1 {color: #2c3e50; font-size: 2em; margin: 0 0 8px 0; letter-spacing: 1px;}
+    .container {max-width: 700px; margin: 24px auto; background: #fff; border-radius: 12px; box-shadow: 0 4px 16px rgba(44,62,80,0.08); padding: 28px 18px 24px 18px;}
+    .pay-section {background: #f9f9f9; border-radius: 8px; padding: 18px 14px; margin-bottom: 24px; border: 1px solid #eee;}
+    .pay-section h2 {color: #e67e22; font-size: 1.2em; margin-top: 0;}
+    .pay-btn {background: linear-gradient(90deg, #e67e22 60%, #f9ca24 100%); color: #fff; border: none; border-radius: 8px; padding: 12px 24px; font-size: 1.1em; font-weight: 600; cursor: pointer; margin-top: 10px; box-shadow: 0 2px 8px rgba(230,126,34,0.10); transition: background 0.2s, transform 0.1s; display: flex; align-items: center; gap: 8px;}
+    .pay-btn:active {background: linear-gradient(90deg, #f9ca24 60%, #e67e22 100%); transform: scale(0.98);}
+    .skills-list {margin-bottom: 18px;}
+    .skills-list li {margin-bottom: 4px;}
+    .video-section {margin-top: 18px;}
+    .video-section h2 {color: #2c3e50; font-size: 1.1em; margin-bottom: 8px;}
+    video {width: 100%; max-width: 600px; border-radius: 8px; box-shadow: 0 2px 8px rgba(44,62,80,0.10);}
+    .back-link {display: inline-block; margin-bottom: 18px; color: #e67e22; text-decoration: none; font-weight: 600; font-size: 1em;}
+    .back-link:hover {text-decoration: underline;}
+    .locked {position: relative;}
+    .locked video {filter: blur(8px) grayscale(0.7); pointer-events: none;}
+    .locked .overlay {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.8); display: flex; align-items: center; justify-content: center; color: #e67e22; font-size: 1.2em; font-weight: bold; border-radius: 8px;}
+    .unlock-btn {margin-top: 12px; background: #e67e22; color: #fff; border: none; border-radius: 8px; padding: 10px 20px; font-size: 1em; cursor: pointer;}
+    .unlock-btn:active {background: #f9ca24;}
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo-skilllab.png" alt="Logo SkillLab">
+    <h1>Corso di Elettronica</h1>
+  </header>
+  <div class="container">
+    <a href="Sito.html" class="back-link">&larr; Torna ai corsi</a>
+    <div class="pay-section">
+      <h2>Pagamento</h2>
+      <p>Per acquistare il corso di elettronica, effettua il pagamento con carta Visa tramite Stripe:</p>
+      <button class="pay-btn" onclick="window.open('https://buy.stripe.com/test_7sI4iQ2wA0gQ2yQbII', '_blank')">
+        <img src='https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png' alt='Visa' style='height:22px;vertical-align:middle;'> &nbsp;Paga ora
+      </button>
+      <p style="font-size:0.95em;color:#888;margin-top:8px;">Dopo il pagamento, clicca il pulsante qui sotto per sbloccare i contenuti multimediali.</p>
+      <button class="unlock-btn" onclick="unlockVideo()">Ho pagato, sblocca i video</button>
+    </div>
+    <h2>Cosa imparerai:</h2>
+    <ul class="skills-list">
+      <li>Componenti fondamentali: resistori, LED, condensatori</li>
+      <li>Montaggio di un circuito base</li>
+      <li>Uso del breadboard</li>
+      <li>Installazione di una manopola per regolare l’intensità di corrente</li>
+    </ul>
+  </div>
+  <script>
+    function unlockVideo() {
+      document.getElementById('videoSection').classList.remove('locked');
+      const overlay = document.querySelector('#videoSection .overlay');
+      if (overlay) overlay.remove();
+    }
+  </script>
+</body>
+</html>

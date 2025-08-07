@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>SkillLab.it</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #f4f4f4 60%, #e0e7ff 100%);
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+    }
+    header {
+      background: #fff;
+      padding: 32px 10px 20px 10px;
+      text-align: center;
+      border-bottom: 2px solid #ddd;
+      box-shadow: 0 2px 8px rgba(44,62,80,0.04);
+    }
+    header img {
+      max-height: 70px;
+      margin-bottom: 10px;
+    }
+    h1 {
+      color: #2c3e50;
+      font-size: 2.2em;
+      margin: 0 0 8px 0;
+      letter-spacing: 1px;
+    }
+    .description {
+      text-align: center;
+      padding: 18px 24px 10px 24px;
+      font-size: 1.25em;
+      color: #444;
+      max-width: 700px;
+      margin: 0 auto 18px auto;
+    }
+    .courses-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+      padding: 10px 10px 40px 10px;
+    }
+    .course {
+      background: #fff;
+      flex: 1 1 320px;
+      min-width: 300px;
+      max-width: 370px;
+      margin: 0 auto;
+      padding: 24px 20px 20px 20px;
+      border-radius: 14px;
+      box-shadow: 0 4px 16px rgba(44,62,80,0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      transition: transform 0.15s;
+    }
+    .course:active, .course:focus-within {
+      transform: scale(1.02);
+      box-shadow: 0 8px 24px rgba(44,62,80,0.13);
+    }
+    .course h2 {
+      color: #e67e22;
+      font-size: 1.4em;
+      margin-bottom: 8px;
+    }
+    .course ul {
+      padding-left: 20px;
+      margin-bottom: 18px;
+    }
+    .course p {
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: #333;
+    }
+    .buy-btn {
+      background: linear-gradient(90deg, #e67e22 60%, #f9ca24 100%);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 14px 28px;
+      font-size: 1.1em;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: auto;
+      box-shadow: 0 2px 8px rgba(230,126,34,0.10);
+      transition: background 0.2s, transform 0.1s;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      touch-action: manipulation;
+    }
+    .buy-btn:active {
+      background: linear-gradient(90deg, #f9ca24 60%, #e67e22 100%);
+      transform: scale(0.98);
+    }
+    @media (max-width: 900px) {
+      .courses-container {
+        flex-direction: column;
+        gap: 18px;
+        padding: 10px 0 30px 0;
+      }
+      .course {
+        max-width: 98vw;
+      }
+    }
+    @media (max-width: 600px) {
+      header {
+        padding: 18px 2px 10px 2px;
+      }
+      .description {
+        font-size: 1em;
+        padding: 10px 6px 6px 6px;
+      }
+      .course {
+        padding: 14px 6px 14px 6px;
+      }
+      .buy-btn {
+        font-size: 1em;
+        padding: 12px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo-skilllab.png" alt="Logo SkillLab">
+    <h1>SkillLab.it</h1>
+  </header>
+
+  <div class="description">
+    Il tuo laboratorio digitale per imparare competenze pratiche e divertenti, ovunque tu sia.
+  </div>
+
+  <div class="courses-container">
+    <div class="course">
+      <h2>⚽ Corso di Calcio</h2>
+      <p>Impara le tecniche più spettacolari e utili per migliorare il tuo gioco:</p>
+      <ul>
+        <li>Tiro di rabona</li>
+        <li>Bicicletta</li>
+        <li>Dribbling stretto</li>
+        <li>Controllo palla avanzato</li>
+      </ul>
+      <button class="buy-btn" onclick="window.location.href='calcio.html'">
+        <img src='https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png' alt='Visa' style='height:22px;vertical-align:middle;'> &nbsp;Acquista ora
+      </button>
+    </div>
+    <div class="course">
+      <h2>🔌 Corso di Elettronica</h2>
+      <p>Partiamo dalle basi e costruiamo insieme un circuito completo:</p>
+      <ul>
+        <li>Componenti fondamentali: resistori, LED, condensatori</li>
+        <li>Montaggio di un circuito base</li>
+        <li>Uso del breadboard</li>
+        <li>Installazione di una manopola per regolare l’intensità di corrente</li>
+      </ul>
+      <button class="buy-btn" onclick="window.location.href='elettronica.html'">
+        <img src='https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png' alt='Visa' style='height:22px;vertical-align:middle;'> &nbsp;Acquista ora
+      </button>
+    </div>
+    <div class="course">
+      <h2>🛠️ Corso di Artigianato</h2>
+      <p><em>Work in progress…</em> Presto disponibile con progetti manuali e creativi!</p>
+      <button class="buy-btn" onclick="window.location.href='artigianato.html'" style="background:#ccc;cursor:pointer;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa" style="height:22px;vertical-align:middle;opacity:0.5;">&nbsp;Work in progress
+      </button>
+    </div>
+  </div>
+  <!-- Stripe.js per sicurezza futura, non necessario per link diretti ma utile se vorrai personalizzare -->
+  <script src="https://js.stripe.com/v3/"></script>
+
+</body>
+</html>
